@@ -1,0 +1,69 @@
+/* Meatball cursor follower */
+.meatball-cursor {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s;
+}
+
+.meatball-cursor img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+/* Heart trail effect */
+.cursor-heart {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    font-size: 1.2rem;
+    animation: heartFloat 2s ease-out forwards;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes heartFloat {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translate(
+            calc(-50% + var(--random-x)),
+            calc(-50% + var(--random-y))
+        ) scale(1) rotate(180deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(
+            calc(-50% + var(--random-x) * 2),
+            calc(-50% + var(--random-y) - 50px)
+        ) scale(0.3) rotate(360deg);
+    }
+}
+
+/* Hide Meatball cursor on mobile/touch devices */
+@media (max-width: 768px), (pointer: coarse) {
+    .meatball-cursor {
+        display: none !important;
+    }
+
+    body {
+        cursor: auto !important;
+    }
+
+    .cursor-heart {
+        display: none;
+    }
+}
+
+/* Performance optimization */
+.meatball-cursor,
+.cursor-heart {
+    will-change: transform, opacity;
+}

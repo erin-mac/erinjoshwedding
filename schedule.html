@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - Josh & Erin's Wedding</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/decorations.css">
+    <link rel="stylesheet" href="css/persistent-audio.css">
+    <link rel="stylesheet" href="css/meatball-cursor.css">
+    <style>
+        .timeline {
+            max-width: 800px;
+            margin: 2rem auto;
+            position: relative;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-time {
+            min-width: 120px;
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .timeline-content h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-light);
+            margin: 0.5rem 0;
+        }
+
+        .day-section {
+            margin-bottom: 4rem;
+        }
+
+        .day-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .day-header h3 {
+            color: var(--white);
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .day-header p {
+            margin: 0.5rem 0 0;
+            opacity: 0.9;
+        }
+
+        .hotel-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+        }
+
+        .hotel-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hotel-info {
+            color: var(--text-light);
+            margin: 0.5rem 0;
+        }
+
+        .hotel-info strong {
+            color: var(--text-dark);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Josh & Erin's Wedding Weekend</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html" class="active">Schedule</a></li>
+                <li><a href="rsvp.html">RSVP</a></li>
+                <li><a href="registry.html">Registry</a></li>
+                <li><a href="dc-guide.html">DC Guide</a></li>
+                <li><a href="photos.html">Photos</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="welcome-section section-header-decorated">
+            <h2>Wedding Weekend Schedule</h2>
+            <p>Here's everything you need to know about our wedding weekend in Washington, DC!</p>
+        </section>
+
+        <!-- Friday Events -->
+        <section class="day-section">
+            <div class="day-header">
+                <h3>Friday, May 29, 2026</h3>
+                <p>Welcome to DC!</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">Evening</div>
+                    <div class="timeline-content">
+                        <h4>Rehearsal Dinner & Welcome Drinks</h4>
+                        <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Tiger+Fork+Washington+DC" target="_blank" style="color: var(--primary-color);">Tiger Fork</a></p>
+                        <p>Join us for rehearsal dinner and welcome drinks as we kick off the weekend! Casual attire.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Saturday Events -->
+        <section class="day-section">
+            <div class="day-header">
+                <h3>Saturday, May 30, 2026</h3>
+                <p>The Big Day!</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">3:30 PM</div>
+                    <div class="timeline-content">
+                        <h4>Guest Arrival</h4>
+                        <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=The+AutoShop+Washington+DC" target="_blank" style="color: var(--primary-color);">The AutoShop</a></p>
+                        <p>Please arrive by 3:30 PM to find your seat. The ceremony will begin promptly at 4:00 PM.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">4:00 PM</div>
+                    <div class="timeline-content">
+                        <h4>Ceremony</h4>
+                        <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=The+AutoShop+Washington+DC" target="_blank" style="color: var(--primary-color);">The AutoShop</a></p>
+                        <p><strong>Attire:</strong> Formal/Cocktail</p>
+                        <p>Join us as we say "I do!"</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">4:30 PM</div>
+                    <div class="timeline-content">
+                        <h4>Cocktail Hour</h4>
+                        <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=The+AutoShop+Washington+DC" target="_blank" style="color: var(--primary-color);">The AutoShop</a></p>
+                        <p>Enjoy drinks and hors d'oeuvres while we take photos!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">6:00 PM</div>
+                    <div class="timeline-content">
+                        <h4>Reception</h4>
+                        <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=The+AutoShop+Washington+DC" target="_blank" style="color: var(--primary-color);">The AutoShop</a></p>
+                        <p>Dinner, dancing, and celebration! Let's party!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">11:00 PM</div>
+                    <div class="timeline-content">
+                        <h4>Last Call</h4>
+                        <p>Reception ends, but the celebration can continue at nearby bars!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sunday Events -->
+        <section class="day-section">
+            <div class="day-header">
+                <h3>Sunday, May 31, 2026</h3>
+                <p>Informal Farewell</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">Morning</div>
+                    <div class="timeline-content">
+                        <h4>Breakfast & Goodbyes</h4>
+                        <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=The+Line+Hotel+Washington+DC" target="_blank" style="color: var(--primary-color);">The Line Hotel</a></p>
+                        <p>We'll likely gather at the Line hotel for breakfast and informal goodbyes. Come and go as you please!</p>
+                        <p><strong>Attire:</strong> Casual</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to Wear Section -->
+        <section class="content-section">
+            <h2>What to Wear</h2>
+            <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+                <p><strong>Saturday Ceremony & Reception:</strong> Formal/Cocktail Attire</p>
+                <p style="color: var(--text-light); margin: 1rem 0;">Think suits, dress shirts, cocktail dresses, and dressy separates. The ceremony will be [indoors/outdoors], so plan accordingly!</p>
+
+                <p style="margin-top: 2rem;"><strong>Friday Welcome & Sunday Brunch:</strong> Casual</p>
+                <p style="color: var(--text-light);">Come as you are! Comfortable and relaxed.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Josh & Erin. Made with ♥</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/persistent-audio.js"></script>
+    <script src="js/meatball-cursor.js"></script>
+</body>
+</html>

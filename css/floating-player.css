@@ -1,0 +1,58 @@
+/* Floating Spotify Player */
+.floating-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    z-index: 1000;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--white);
+}
+
+.player-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+}
+
+.player-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.player-toggle {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.player-toggle:hover {
+    opacity: 0.8;
+}
+
+.player-content {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+.player-content.collapsed {
+    max-height: 0;
+}
+
+@media (max-width: 768px) {
+    .floating-player {
+        width: 280px;
+        bottom: 10px;
+        right: 10px;
+    }
+}

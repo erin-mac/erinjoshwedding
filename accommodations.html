@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodations - Josh & Erin's Wedding</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/decorations.css">
+    <link rel="stylesheet" href="css/persistent-audio.css">
+    <link rel="stylesheet" href="css/meatball-cursor.css">
+    <style>
+        .hotel-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            border: 2px solid var(--accent-color);
+        }
+
+        .hotel-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .hotel-info {
+            color: var(--text-light);
+            margin: 0.75rem 0;
+            line-height: 1.8;
+        }
+
+        .hotel-info strong {
+            color: var(--text-dark);
+        }
+
+        .hotel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Josh & Erin's Wedding Weekend</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="accommodations.html" class="active">Accommodations</a></li>
+                <li><a href="rsvp.html">RSVP</a></li>
+                <li><a href="registry.html">Registry</a></li>
+                <li><a href="dc-guide.html">DC Guide</a></li>
+                <li><a href="photos.html">Photos</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="welcome-section section-header-decorated">
+            <h2>Accommodations</h2>
+            <p>We've reserved room blocks at two wonderful hotels near our venue. Please book by the deadline to receive the group rate!</p>
+        </section>
+
+        <section class="hotel-grid">
+            <div class="hotel-card">
+                <h4>🏨 Courtyard by Marriott Washington Capitol Hill/Navy Yard</h4>
+                <p class="hotel-info"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=1325+2nd+St+NE+Washington+DC+20002" target="_blank" style="color: var(--primary-color);">1325 2nd St NE, Washington, DC 20002</a></p>
+                <p class="hotel-info"><strong>Group Rate:</strong> $159.18/night</p>
+                <p class="hotel-info"><strong>Block Dates:</strong> May 29-31, 2026</p>
+                <p class="hotel-info"><strong>Booking:</strong> Mention "McAweeney New Wedding" when booking</p>
+                <p class="hotel-info"><strong>Deadline:</strong> April 28, 2026</p>
+                <p class="hotel-info" style="margin-top: 1rem;">
+                    <strong>Contact:</strong> Remy Desta<br>
+                    📞 <a href="tel:+12028984000" style="color: var(--primary-color);">(202) 898-4000</a><br>
+                    📧 <a href="mailto:Meskerem.Desta@marriott.com" style="color: var(--primary-color);">Meskerem.Desta@marriott.com</a>
+                </p>
+                <a href="https://app.marriott.com/reslink?id=1764022264176&key=GRP&app=resvlink" target="_blank" class="btn btn-primary" style="margin-top: 1rem;">Book Online</a>
+            </div>
+
+            <div class="hotel-card">
+                <h4>🏨 Hyatt Place Washington DC/US Capitol</h4>
+                <p class="hotel-info"><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=33+New+York+Ave+NE+Washington+DC+20002" target="_blank" style="color: var(--primary-color);">33 New York Ave NE, Washington, DC 20002</a></p>
+                <p class="hotel-info"><strong>Group Rate:</strong> $179.19/night</p>
+                <p class="hotel-info"><strong>Block Dates:</strong> May 29-31, 2026</p>
+                <p class="hotel-info"><strong>Booking:</strong> Mention "McAweeney New Wedding" when booking</p>
+                <p class="hotel-info"><strong>Deadline:</strong> May 1, 2026</p>
+                <p class="hotel-info" style="margin-top: 1rem;">
+                    <strong>Contact:</strong> Jason Ducre<br>
+                    📞 <a href="tel:+12025895599" style="color: var(--primary-color);">(202) 589-5599</a><br>
+                    📧 <a href="mailto:jason.ducre@hyatt.com" style="color: var(--primary-color);">jason.ducre@hyatt.com</a>
+                </p>
+                <a href="https://www.hyatt.com/events/en-US/group-booking/WASZD/G-MYNW" target="_blank" class="btn btn-primary" style="margin-top: 1rem;">Book Online</a>
+            </div>
+        </section>
+
+        <!-- Transportation Section -->
+        <section class="content-section">
+            <h2>Getting Around DC</h2>
+            <div style="max-width: 700px; margin: 0 auto;">
+                <h4 style="color: var(--secondary-color);">🚇 Metro</h4>
+                <p>DC's Metro system is convenient and affordable. The closest stations to our venues are [Station Names].</p>
+
+                <h4 style="color: var(--secondary-color); margin-top: 2rem;">🚗 Parking</h4>
+                <p>Parking is available at [Venue Name] for $[Price]. Street parking is also available nearby.</p>
+
+                <h4 style="color: var(--secondary-color); margin-top: 2rem;">🚕 Rideshare</h4>
+                <p>Uber and Lyft are readily available throughout DC.</p>
+            </div>
+        </section>
+
+        <!-- Other Lodging Options -->
+        <section class="content-section">
+            <h2>Other Lodging Options</h2>
+            <div style="max-width: 700px; margin: 0 auto;">
+                <h4 style="color: var(--secondary-color);">Airbnb & VRBO</h4>
+                <p>There are many great Airbnb and VRBO options in DC neighborhoods near our venues. We recommend looking in [Neighborhoods].</p>
+
+                <h4 style="color: var(--secondary-color); margin-top: 2rem;">Other Hotels</h4>
+                <p>DC has many wonderful hotels beyond our room blocks. Some neighborhoods to consider include Georgetown, Dupont Circle, and Capitol Hill.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Josh & Erin. Made with ♥</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/persistent-audio.js"></script>
+    <script src="js/meatball-cursor.js"></script>
+</body>
+</html>

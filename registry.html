@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registry - Josh & Erin's Wedding</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/decorations.css">
+    <link rel="stylesheet" href="css/persistent-audio.css">
+    <link rel="stylesheet" href="css/meatball-cursor.css">
+    <style>
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .payment-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .payment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: var(--secondary-color);
+        }
+
+        .payment-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .payment-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .payment-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .payment-link {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .payment-link:hover {
+            background: var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        .payment-info {
+            background: var(--accent-color);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .payment-info code {
+            background: var(--white);
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: monospace;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Josh & Erin's Wedding Weekend</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="accommodations.html">Accommodations</a></li>
+                <li><a href="rsvp.html">RSVP</a></li>
+                <li><a href="registry.html" class="active">Registry</a></li>
+                <li><a href="dc-guide.html">DC Guide</a></li>
+                <li><a href="photos.html">Photos</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="welcome-section section-header-decorated">
+            <h2>Registry & Gifts</h2>
+            <p>Your presence at our wedding is the greatest gift of all! If you'd like to contribute to our honeymoon or new home fund, we'd be incredibly grateful.</p>
+        </section>
+
+        <section class="content-section">
+            <h3>💝 Contribute to Our Future</h3>
+            <p style="text-align: center; color: var(--text-light); max-width: 700px; margin: 0 auto 2rem;">
+                We're so excited to start our new life together! Your contributions will help us create amazing memories on our honeymoon and make our new house feel like home.
+            </p>
+
+            <div class="payment-grid">
+                <!-- Venmo -->
+                <div class="payment-card">
+                    <div class="payment-icon">📱</div>
+                    <h3>Venmo</h3>
+                    <p>Send a contribution via Venmo</p>
+                    <a href="https://venmo.com/YOUR-USERNAME" target="_blank" class="payment-link">Open Venmo</a>
+                    <div class="payment-info">
+                        Username: <code>@your-username</code>
+                    </div>
+                </div>
+
+                <!-- Zelle -->
+                <div class="payment-card">
+                    <div class="payment-icon">💳</div>
+                    <h3>Zelle</h3>
+                    <p>Send directly through your bank</p>
+                    <div class="payment-info">
+                        Email: <code>your-email@example.com</code><br>
+                        Phone: <code>(123) 456-7890</code>
+                    </div>
+                </div>
+
+                <!-- PayPal -->
+                <div class="payment-card">
+                    <div class="payment-icon">🌐</div>
+                    <h3>PayPal</h3>
+                    <p>Send a gift via PayPal</p>
+                    <a href="https://paypal.me/YOUR-USERNAME" target="_blank" class="payment-link">Open PayPal</a>
+                    <div class="payment-info">
+                        Username: <code>your-username</code>
+                    </div>
+                </div>
+
+                <!-- Cash App -->
+                <div class="payment-card">
+                    <div class="payment-icon">💵</div>
+                    <h3>Cash App</h3>
+                    <p>Contribute via Cash App</p>
+                    <a href="https://cash.app/$YOUR-CASHTAG" target="_blank" class="payment-link">Open Cash App</a>
+                    <div class="payment-info">
+                        Cashtag: <code>$your-cashtag</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h3>🏠 What We're Saving For</h3>
+            <div style="max-width: 700px; margin: 0 auto;">
+                <div style="margin: 2rem 0;">
+                    <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">Honeymoon Adventure</h4>
+                    <p>We're planning an amazing honeymoon to [Destination]! Your contributions will help us explore, relax, and create unforgettable memories together.</p>
+                </div>
+                <div style="margin: 2rem 0;">
+                    <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">New Home Fund</h4>
+                    <p>We're building our nest together! Contributions will go toward furniture, kitchen essentials, and making our new house feel like home.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h3>Thank You!</h3>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto;">
+                We're so grateful for your love and support as we begin this new chapter. Whether you're able to contribute or not, having you celebrate with us means the world!
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Josh & Erin. Made with ♥</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/persistent-audio.js"></script>
+    <script src="js/meatball-cursor.js"></script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC Guide - Josh & Erin's Wedding</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/decorations.css">
+    <link rel="stylesheet" href="css/persistent-audio.css">
+    <link rel="stylesheet" href="css/meatball-cursor.css">
+    <style>
+        .category-section {
+            margin-bottom: 3rem;
+        }
+
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .recommendation-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .recommendation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .recommendation-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .recommendation-card .category-tag {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .recommendation-card p {
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .recommendation-card .address {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .recommendation-card .link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .recommendation-card .link:hover {
+            color: var(--secondary-color);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .category-icon {
+            font-size: 2rem;
+        }
+
+        .category-header h3 {
+            margin: 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Josh & Erin's Wedding Weekend</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="accommodations.html">Accommodations</a></li>
+                <li><a href="rsvp.html">RSVP</a></li>
+                <li><a href="registry.html">Registry</a></li>
+                <li><a href="dc-guide.html" class="active">DC Guide</a></li>
+                <li><a href="photos.html">Photos</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="welcome-section section-header-decorated">
+            <h2>Explore Washington, DC</h2>
+            <p>We love DC and we're excited to share some of our favorite spots with you! Here are our recommendations for things to do, places to eat, and sights to see during your visit.</p>
+        </section>
+
+        <!-- Restaurants -->
+        <section class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🍽️</span>
+                <h3>Restaurants</h3>
+            </div>
+
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <span class="category-tag">Fine Dining</span>
+                    <h4>Restaurant Name</h4>
+                    <p>Description of the restaurant and what makes it special. Why we love it!</p>
+                    <p class="address">📍 123 Main St, Washington, DC</p>
+                    <a href="#" target="_blank" class="link">View Menu →</a>
+                </div>
+
+                <div class="recommendation-card">
+                    <span class="category-tag">Casual</span>
+                    <h4>Restaurant Name</h4>
+                    <p>Description of the restaurant and what makes it special. Why we love it!</p>
+                    <p class="address">📍 456 Street Ave, Washington, DC</p>
+                    <a href="#" target="_blank" class="link">View Menu →</a>
+                </div>
+
+                <div class="recommendation-card">
+                    <span class="category-tag">Brunch</span>
+                    <h4>Restaurant Name</h4>
+                    <p>Description of the restaurant and what makes it special. Why we love it!</p>
+                    <p class="address">📍 789 Avenue Rd, Washington, DC</p>
+                    <a href="#" target="_blank" class="link">View Menu →</a>
+                </div>
+
+                <div class="recommendation-card">
+                    <span class="category-tag">Quick Bite</span>
+                    <h4>Restaurant Name</h4>
+                    <p>Description of the restaurant and what makes it special. Why we love it!</p>
+                    <p class="address">📍 321 Food St, Washington, DC</p>
+                    <a href="#" target="_blank" class="link">View Menu →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bars & Nightlife -->
+        <section class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🍸</span>
+                <h3>Bars & Nightlife</h3>
+            </div>
+
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <span class="category-tag">Cocktail Bar</span>
+                    <h4>Bar Name</h4>
+                    <p>Description of the bar and what makes it special. Great cocktails and atmosphere!</p>
+                    <p class="address">📍 123 Bar Lane, Washington, DC</p>
+                    <a href="#" target="_blank" class="link">Learn More →</a>
+                </div>
+
+                <div class="recommendation-card">
+                    <span class="category-tag">Rooftop</span>
+                    <h4>Bar Name</h4>
+                    <p>Amazing rooftop views and great drinks. Perfect for a summer evening!</p>
+                    <p class="address">📍 456 High St, Washington, DC</p>
+                    <a href="#" target="_blank" class="link">Learn More →</a>
+                </div>
+
+                <div class="recommendation-card">
+                    <span class="category-tag">Wine Bar</span>
+                    <h4>Bar Name</h4>
+                    <p>Cozy wine bar with excellent selection and small plates.</p>
+                    <p class="address">📍 789 Wine Ave, Washington, DC</p>
+                    <a href="#" target="_blank" class="link">Learn More →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coffee & Cafes -->
+        <section class="category-section">
+            <div class="category-header">
+                <span class="category-icon">☕</span>
+                <h3>Coffee & Cafes</h3>
+            </div>
+
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <span class="category-tag">Coffee Shop</span>
+                    <h4>Cafe Name</h4>
+                    <p>Great coffee and pastries. Perfect spot to start your morning!</p>
+                    <p class="address">📍 123 Coffee St, Washington, DC</p>
+                    <a href="#" target="_blank" class="link">Learn More →</a>
+                </div>
+
+                <div class="recommendation-card">
+                    <span class="category-tag">Bakery</span>
+                    <h4>Bakery Name</h4>
+                    <p>Incredible pastries and baked goods. Don't miss the croissants!</p>
+                    <p class="address">📍 456 Bread Ave, Washington, DC</p>
+                    <a href="#" target="_blank" class="link">Learn More →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Museums & Culture -->
+        <section class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🏛️</span>
+                <h3>Museums & Culture</h3>
+            </div>
+
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <span class="category-tag">Smithsonian</span>
+                    <h4>National Gallery of Art</h4>
+                    <p>World-class art collection. Free admission! Plan for at least 2-3 hours.</p>
+                    <p class="address">📍 Constitution Ave NW, Washington, DC</p>
+                    <a href="https://www.nga.gov/" target="_blank" class="link">Visit Website →</a>
+                </div>
+
+                <div class="recommendation-card">
+                    <span class="category-tag">Smithsonian</span>
+                    <h4>National Museum of American History</h4>
+                    <p>Fascinating exhibits on American history and culture. Free admission!</p>
+                    <p class="address">📍 Constitution Ave NW, Washington, DC</p>
+                    <a href="https://americanhistory.si.edu/" target="_blank" class="link">Visit Website →</a>
+                </div>
+
+                <div class="recommendation-card">
+                    <span class="category-tag">Smithsonian</span>
+                    <h4>National Air and Space Museum</h4>
+                    <p>Amazing collection of aircraft and spacecraft. Great for all ages!</p>
+                    <p class="address">📍 Independence Ave SW, Washington, DC</p>
+                    <a href="https://airandspace.si.edu/" target="_blank" class="link">Visit Website →</a>
+                </div>
+
+                <div class="recommendation-card">
+                    <span class="category-tag">Historic</span>
+                    <h4>Library of Congress</h4>
+                    <p>Stunning architecture and fascinating exhibits. Free tours available!</p>
+                    <p class="address">📍 101 Independence Ave SE, Washington, DC</p>
+                    <a href="https://www.loc.gov/" target="_blank" class="link">Visit Website →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Monuments & Landmarks -->
+        <section class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🗽</span>
+                <h3>Monuments & Landmarks</h3>
+            </div>
+
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <span class="category-tag">Monument</span>
+                    <h4>Lincoln Memorial</h4>
+                    <p>Iconic monument with stunning views of the Reflecting Pool and Washington Monument. Best at sunset or sunrise!</p>
+                    <p class="address">📍 2 Lincoln Memorial Cir NW, Washington, DC</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <span class="category-tag">Monument</span>
+                    <h4>Washington Monument</h4>
+                    <p>Iconic obelisk in the heart of the National Mall. Reserve tickets in advance for the observation deck!</p>
+                    <p class="address">📍 2 15th St NW, Washington, DC</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <span class="category-tag">Memorial</span>
+                    <h4>Martin Luther King, Jr. Memorial</h4>
+                    <p>Powerful memorial honoring Dr. King. Beautiful setting along the Tidal Basin.</p>
+                    <p class="address">📍 1964 Independence Ave SW, Washington, DC</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <span class="category-tag">Historic</span>
+                    <h4>U.S. Capitol Building</h4>
+                    <p>Stunning architecture and historic significance. Free tours available with advance reservation.</p>
+                    <p class="address">📍 First St SE, Washington, DC</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parks & Outdoors -->
+        <section class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🌳</span>
+                <h3>Parks & Outdoors</h3>
+            </div>
+
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <span class="category-tag">Park</span>
+                    <h4>National Mall</h4>
+                    <p>Iconic green space connecting monuments and museums. Perfect for a stroll or picnic!</p>
+                    <p class="address">📍 Between Constitution & Independence Aves, Washington, DC</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <span class="category-tag">Waterfront</span>
+                    <h4>Tidal Basin</h4>
+                    <p>Beautiful walk around the water with stunning views of monuments. Famous for cherry blossoms in spring!</p>
+                    <p class="address">📍 West Potomac Park, Washington, DC</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <span class="category-tag">Neighborhood</span>
+                    <h4>Georgetown Waterfront</h4>
+                    <p>Scenic walk along the Potomac River. Great restaurants and shops nearby!</p>
+                    <p class="address">📍 Water St NW, Washington, DC</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <span class="category-tag">Park</span>
+                    <h4>Rock Creek Park</h4>
+                    <p>Large urban park with hiking trails, picnic areas, and beautiful nature.</p>
+                    <p class="address">📍 5200 Glover Rd NW, Washington, DC</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Neighborhoods -->
+        <section class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🏘️</span>
+                <h3>Neighborhoods to Explore</h3>
+            </div>
+
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <h4>Georgetown</h4>
+                    <p>Historic neighborhood with cobblestone streets, upscale shopping, great restaurants, and the Georgetown University campus.</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <h4>Adams Morgan</h4>
+                    <p>Eclectic neighborhood known for diverse dining, vibrant nightlife, and unique shops.</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <h4>Dupont Circle</h4>
+                    <p>Bustling area with restaurants, bars, bookstores, and a great farmers market on Sundays.</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <h4>U Street Corridor</h4>
+                    <p>Historic neighborhood with rich music history, trendy bars, and excellent restaurants.</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <h4>Capitol Hill</h4>
+                    <p>Home to the Capitol Building, with charming row houses, Eastern Market, and great restaurants.</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <h4>The Wharf</h4>
+                    <p>Revitalized waterfront area with restaurants, bars, shops, and beautiful water views.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h3>Travel Tips</h3>
+            <div style="max-width: 700px; margin: 0 auto;">
+                <ul style="color: var(--text-light); line-height: 2;">
+                    <li><strong>Getting Around:</strong> DC's Metro system is excellent for getting around. Consider getting a SmarTrip card!</li>
+                    <li><strong>Free Museums:</strong> All Smithsonian museums are free, but some require timed entry passes - reserve in advance!</li>
+                    <li><strong>Walking:</strong> DC is very walkable. Many monuments are within walking distance of each other on the National Mall.</li>
+                    <li><strong>Weather:</strong> [Month] weather in DC can be [description]. Bring [appropriate items]!</li>
+                    <li><strong>Reservations:</strong> Popular restaurants book up quickly. Make reservations in advance when possible.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Josh & Erin. Made with ♥</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/persistent-audio.js"></script>
+    <script src="js/meatball-cursor.js"></script>
+</body>
+</html>

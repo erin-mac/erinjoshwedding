@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh & Erin's Wedding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/decorations.css">
+    <link rel="stylesheet" href="css/persistent-audio.css">
+    <link rel="stylesheet" href="css/meatball-cursor.css">
+    <style>
+        /* Disco decorations */
+        .disco-decoration {
+            position: fixed;
+            font-size: 3rem;
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .disco-ball-1 {
+            top: 10%;
+            left: 5%;
+            animation: wiggle 3s ease-in-out infinite, rotate 6s linear infinite;
+        }
+
+        .disco-ball-2 {
+            top: 70%;
+            right: 8%;
+            animation: wiggle 4s ease-in-out infinite 1s, rotate 8s linear infinite;
+        }
+
+        .martini-1 {
+            top: 25%;
+            right: 10%;
+            animation: wiggle 3.5s ease-in-out infinite 0.5s, tilt 2s ease-in-out infinite;
+        }
+
+        .martini-2 {
+            bottom: 30%;
+            left: 15%;
+            animation: wiggle 4.5s ease-in-out infinite 1.5s, tilt 2.5s ease-in-out infinite;
+        }
+
+        .flower-1 {
+            top: 50%;
+            left: 3%;
+            animation: wiggle 3s ease-in-out infinite, spin 8s ease-in-out infinite;
+        }
+
+        .flower-2 {
+            top: 15%;
+            right: 3%;
+            animation: wiggle 3.8s ease-in-out infinite 0.8s, spin 7s ease-in-out infinite reverse;
+        }
+
+        @keyframes wiggle {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(10px, -10px);
+            }
+            50% {
+                transform: translate(-5px, 5px);
+            }
+            75% {
+                transform: translate(-10px, -5px);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes tilt {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(15deg);
+            }
+        }
+
+        @keyframes spin {
+            0%, 100% {
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                transform: rotate(180deg) scale(1.1);
+            }
+        }
+
+        /* Hide decorations on mobile */
+        @media (max-width: 768px) {
+            .disco-decoration {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Disco decorations -->
+    <div class="disco-decoration disco-ball-1">🪩</div>
+    <div class="disco-decoration disco-ball-2">🪩</div>
+    <div class="disco-decoration martini-1">🍸</div>
+    <div class="disco-decoration martini-2">🍸</div>
+    <div class="disco-decoration flower-1">🌸</div>
+    <div class="disco-decoration flower-2">🌸</div>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Josh & Erin's Wedding Weekend</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="accommodations.html">Accommodations</a></li>
+                <li><a href="rsvp.html">RSVP</a></li>
+                <li><a href="registry.html">Registry</a></li>
+                <li><a href="dc-guide.html">DC Guide</a></li>
+                <li><a href="photos.html">Photos</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="page-decoration-top"></div>
+            <h1 class="hero-title">Josh & Erin</h1>
+            <p class="hero-subtitle">are getting married</p>
+
+            <div class="hero-photo">
+                <img src="images/hero-photo.jpg" alt="Josh and Erin kissing in front of subway train">
+            </div>
+
+            <div class="hero-details">
+                <p class="date">May 30, 2026</p>
+                <p class="location">in Washington DC</p>
+                <p style="margin-top: 1rem; font-style: italic; color: var(--text-light); letter-spacing: 1px;">Details to Follow</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 1rem;">
+        <section class="welcome-section section-header-decorated">
+            <h2>Welcome</h2>
+            <p>We're so excited to celebrate our wedding with you in Washington, DC! This website has everything you need to know about our wedding weekend.</p>
+            <div class="quick-links">
+                <a href="rsvp.html" class="btn btn-primary">RSVP Now</a>
+                <a href="schedule.html" class="btn btn-secondary">View Schedule</a>
+            </div>
+        </section>
+
+        <section class="info-grid">
+            <div class="info-card">
+                <h3>📅 Schedule</h3>
+                <p>View the full wedding weekend agenda and important times</p>
+                <a href="schedule.html">View Details →</a>
+            </div>
+            <div class="info-card">
+                <h3>🏨 Accommodations</h3>
+                <p>Hotel blocks and lodging information</p>
+                <a href="accommodations.html">Learn More →</a>
+            </div>
+            <div class="info-card">
+                <h3>🌆 Things to Do</h3>
+                <p>Our favorite DC spots and recommendations</p>
+                <a href="dc-guide.html">Explore DC →</a>
+            </div>
+            <div class="info-card">
+                <h3>💝 Registry</h3>
+                <p>Contribute to our honeymoon or new home fund</p>
+                <a href="registry.html">View Options →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Josh & Erin. Made with ♥ by Erin and Claude</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/persistent-audio.js"></script>
+    <script src="js/meatball-cursor.js"></script>
+</body>
+</html>

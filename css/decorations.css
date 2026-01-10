@@ -1,0 +1,171 @@
+/* Decorative Elements inspired by Save the Date */
+
+/* Scalloped borders */
+.scalloped-border {
+    position: relative;
+    padding: 2rem;
+}
+
+.scalloped-border::before,
+.scalloped-border::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background-image:
+        radial-gradient(circle at 10px -5px, transparent 10px, var(--primary-color) 10px, var(--primary-color) 11px, transparent 11px),
+        radial-gradient(circle at 30px -5px, transparent 10px, var(--primary-color) 10px, var(--primary-color) 11px, transparent 11px),
+        radial-gradient(circle at 50px -5px, transparent 10px, var(--primary-color) 10px, var(--primary-color) 11px, transparent 11px);
+    background-size: 40px 15px;
+    background-repeat: repeat-x;
+}
+
+.scalloped-border::before {
+    top: 0;
+}
+
+.scalloped-border::after {
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+/* Corner decorations */
+.corner-decorations {
+    position: relative;
+}
+
+.corner-decorations::before,
+.corner-decorations::after {
+    content: '❀';
+    position: absolute;
+    font-size: 1.5rem;
+    color: var(--pink);
+    opacity: 0.7;
+}
+
+.corner-decorations::before {
+    top: 1rem;
+    left: 1rem;
+}
+
+.corner-decorations::after {
+    bottom: 1rem;
+    right: 1rem;
+}
+
+/* Decorative dividers */
+.decorative-divider {
+    text-align: center;
+    margin: 3rem auto;
+    position: relative;
+}
+
+.decorative-divider::before {
+    content: '♥ ✦ ♥';
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    letter-spacing: 1rem;
+}
+
+/* Decorative hearts */
+.heart-decoration {
+    position: relative;
+}
+
+.heart-decoration::after {
+    content: '♥';
+    position: absolute;
+    color: var(--pink);
+    opacity: 0.3;
+    font-size: 3rem;
+    pointer-events: none;
+}
+
+/* Floating decorative elements */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.floating-decoration {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Page decorations */
+.page-decoration-top {
+    display: none;
+}
+
+/* Vintage frame effect */
+.vintage-frame {
+    border: 3px double var(--primary-color);
+    padding: 2rem;
+    position: relative;
+    background: var(--white);
+}
+
+.vintage-frame::before,
+.vintage-frame::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+}
+
+.vintage-frame::before {
+    top: 10px;
+    left: 10px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.vintage-frame::after {
+    bottom: 10px;
+    right: 10px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Decorative section headers */
+.section-header-decorated {
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.section-header-decorated::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+/* Dotted pattern background */
+.dotted-background {
+    background-image: radial-gradient(circle, var(--accent-color) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Romantic rose decoration */
+.rose-decoration::before {
+    content: '🌹';
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    opacity: 0.7;
+}
+
+/* Crown decoration */
+.crown-decoration::after {
+    content: '♔';
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    opacity: 0.6;
+}

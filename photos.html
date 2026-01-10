@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engagement Photos - Josh & Erin's Wedding</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/decorations.css">
+    <link rel="stylesheet" href="css/persistent-audio.css">
+    <link rel="stylesheet" href="css/meatball-cursor.css">
+    <style>
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s;
+            aspect-ratio: 1 / 1;
+            background: var(--accent-color);
+        }
+
+        .photo-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            color: var(--white);
+            font-size: 3rem;
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: var(--white);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lightbox-close:hover {
+            color: var(--secondary-color);
+        }
+
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--white);
+            font-size: 30px;
+            font-weight: bold;
+            padding: 16px;
+            cursor: pointer;
+            user-select: none;
+            transition: 0.3s;
+        }
+
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            color: var(--secondary-color);
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        .photo-counter {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            font-size: 18px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .photo-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            .lightbox-prev,
+            .lightbox-next {
+                font-size: 24px;
+                padding: 10px;
+            }
+
+            .lightbox-close {
+                right: 20px;
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Josh & Erin's Wedding Weekend</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="accommodations.html">Accommodations</a></li>
+                <li><a href="rsvp.html">RSVP</a></li>
+                <li><a href="registry.html">Registry</a></li>
+                <li><a href="dc-guide.html">DC Guide</a></li>
+                <li><a href="photos.html" class="active">Photos</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="welcome-section section-header-decorated">
+            <h2>Our Engagement Photos</h2>
+            <p>Take a look at some of our favorite moments from our engagement photo shoot!</p>
+        </section>
+
+        <section>
+            <div class="photo-gallery" id="photoGallery">
+                <div class="photo-item" data-index="0">
+                    <img src="images/198A0088.jpg" alt="Josh & Erin engagement photo">
+                </div>
+
+                <div class="photo-item" data-index="1">
+                    <img src="images/198A0100.jpg" alt="Josh & Erin engagement photo">
+                </div>
+
+                <div class="photo-item" data-index="2">
+                    <img src="images/198A0344.jpg" alt="Josh & Erin engagement photo">
+                </div>
+
+                <div class="photo-item" data-index="3">
+                    <img src="images/198A0550.jpg" alt="Josh & Erin engagement photo">
+                </div>
+
+                <div class="photo-item" data-index="4">
+                    <img src="images/198A0600.jpg" alt="Josh & Erin engagement photo">
+                </div>
+
+                <div class="photo-item" data-index="5">
+                    <img src="images/198A0690.jpg" alt="Josh & Erin engagement photo">
+                </div>
+
+                <div class="photo-item" data-index="6">
+                    <img src="images/198A0707.jpg" alt="Josh & Erin engagement photo">
+                </div>
+
+                <div class="photo-item" data-index="7">
+                    <img src="images/198A0719.jpg" alt="Josh & Erin engagement photo">
+                </div>
+
+                <div class="photo-item" data-index="8">
+                    <img src="images/198A0777.jpg" alt="Josh & Erin engagement photo">
+                </div>
+
+                <div class="photo-item" data-index="9">
+                    <img src="images/198A0848.jpg" alt="Josh & Erin engagement photo">
+                </div>
+
+                <div class="photo-item" data-index="10">
+                    <img src="images/198A1051.jpg" alt="Josh & Erin engagement photo">
+                </div>
+
+                <div class="photo-item" data-index="11">
+                    <img src="images/198A1208-2.jpg" alt="Josh & Erin engagement photo">
+                </div>
+
+                <div class="photo-item" data-index="12">
+                    <img src="images/198A1255.jpg" alt="Josh & Erin engagement photo">
+                </div>
+
+                <div class="photo-item" data-index="13">
+                    <img src="images/198A1601.jpg" alt="Josh & Erin engagement photo">
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" style="margin-top: 4rem;">
+            <p style="text-align: center; color: var(--text-light); max-width: 600px; margin: 0 auto;">
+                Click on any photo to view it full screen and use the arrow keys or navigation buttons to browse through the gallery!
+            </p>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <span class="lightbox-prev" id="lightboxPrev">&#10094;</span>
+        <span class="lightbox-next" id="lightboxNext">&#10095;</span>
+        <img class="lightbox-content" id="lightboxImg">
+        <div class="photo-counter" id="photoCounter"></div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Josh & Erin. Made with ♥</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/persistent-audio.js"></script>
+    <script src="js/meatball-cursor.js"></script>
+    <script>
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        const photoCounter = document.getElementById('photoCounter');
+        const photoItems = document.querySelectorAll('.photo-item img');
+
+        let currentIndex = 0;
+        const photos = Array.from(photoItems);
+
+        // Open lightbox
+        photoItems.forEach((photo, index) => {
+            photo.parentElement.addEventListener('click', () => {
+                currentIndex = index;
+                showLightbox();
+            });
+        });
+
+        function showLightbox() {
+            if (photos.length > 0) {
+                lightbox.classList.add('active');
+                lightboxImg.src = photos[currentIndex].src;
+                photoCounter.textContent = `${currentIndex + 1} / ${photos.length}`;
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Navigate photos
+        lightboxPrev.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+            showLightbox();
+        });
+
+        lightboxNext.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % photos.length;
+            showLightbox();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') lightboxPrev.click();
+                if (e.key === 'ArrowRight') lightboxNext.click();
+            }
+        });
+    </script>
+</body>
+</html>
