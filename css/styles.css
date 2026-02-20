@@ -47,7 +47,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 20px;
+    padding: 1rem 45px;
 }
 
 .nav-brand {
@@ -56,6 +56,16 @@ body {
     color: var(--primary-color);
     font-family: 'Playfair Display', serif;
     letter-spacing: 2px;
+}
+
+.nav-brand .logo {
+    height: 62.5px;
+    width: auto;
+    display: block;
+}
+
+.nav-brand .logo-small {
+    display: none;
 }
 
 .nav-menu {
@@ -93,6 +103,10 @@ body {
 /* Hero Section */
 .hero {
     background: var(--accent-color);
+    background-image: url('../images/JEWedding-HeroBackground.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--primary-color);
     padding: 6rem 2rem;
     text-align: center;
@@ -365,5 +379,14 @@ footer {
 
     .content-section {
         padding: 1.5rem;
+    }
+
+    .nav-brand .logo-big {
+        display: none;
+    }
+
+    .nav-brand .logo-small {
+        display: block;
+        height: 40px;
     }
 }
