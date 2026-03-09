@@ -101,10 +101,10 @@
         .high-score-banner {
             overflow: hidden;
             background: var(--accent-color);
-            border: 1px solid var(--secondary-color);
-            border-radius: 0 0 8px 8px;
+            border-bottom: 1px solid var(--secondary-color);
             padding: 0.4rem 0;
-            margin-top: -0.25rem;
+            margin-top: -6rem;
+            margin-bottom: 1.5rem;
         }
 
         .banner-track {
@@ -114,8 +114,8 @@
         }
 
         @keyframes scroll-ticker {
-            0%   { transform: translateX(-100%); }
-            100% { transform: translateX(100vw); }
+            0%   { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
         }
 
         .banner-text {
@@ -161,17 +161,17 @@
 
     <header class="hero">
         <div class="hero-content">
+            <div class="high-score-banner" id="highScoreBanner" style="display:none;">
+                <div class="banner-track">
+                    <span class="banner-text" id="highScoreText"></span>
+                </div>
+            </div>
             <div class="page-decoration-top"></div>
             <h1 class="hero-title">Josh & Erin</h1>
             <p class="hero-subtitle">are getting married</p>
 
             <div class="hero-photo">
                 <img src="images/hero-photo.jpg" alt="Josh and Erin kissing in front of subway train">
-            </div>
-            <div class="high-score-banner" id="highScoreBanner" style="display:none;">
-                <div class="banner-track">
-                    <span class="banner-text" id="highScoreText"></span>
-                </div>
             </div>
 
             <div class="hero-details">
@@ -218,7 +218,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Josh & Erin. Made with ♥ by Erin and Claude</p>
+            <p>&copy; 2026 Josh & Erin. Vibecoded with ♥ Josh Mahan Designs</p>
         </div>
     </footer>
 
@@ -241,14 +241,21 @@
         firebase.initializeApp(firebaseConfig);
         const db = firebase.firestore();
 
+        function escapeHtml(str) {
+            var div = document.createElement('div');
+            div.appendChild(document.createTextNode(str));
+            return div.innerHTML;
+        }
+
         db.collection('leaderboard')
             .orderBy('score', 'desc')
             .limit(1)
             .onSnapshot(function(snapshot) {
                 if (!snapshot.empty) {
                     const top = snapshot.docs[0].data();
-                    document.getElementById('highScoreText').textContent =
-                        '🏆  Meatsnake High Score: ' + top.name + ' — ' + top.score + ' points  🐍';
+                    const msg = '🏆  Meatsnake High Score: ' + escapeHtml(top.name) + ' — ' + top.score + ' points  🐍  —  <a href="play.html" style="color: var(--primary-color); font-weight: 600;">play here</a>';
+                    const separator = '<span style="padding: 0 5rem;"></span>';
+                    document.getElementById('highScoreText').innerHTML = msg + separator + msg + separator;
                     document.getElementById('highScoreBanner').style.display = 'block';
                 }
             });
