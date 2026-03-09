@@ -96,6 +96,36 @@
                 display: none;
             }
         }
+
+        /* High score banner */
+        .high-score-banner {
+            overflow: hidden;
+            background: var(--accent-color);
+            border: 1px solid var(--secondary-color);
+            border-radius: 0 0 8px 8px;
+            padding: 0.4rem 0;
+            margin-top: -0.25rem;
+        }
+
+        .banner-track {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll-ticker 18s linear infinite;
+        }
+
+        @keyframes scroll-ticker {
+            0%   { transform: translateX(-100%); }
+            100% { transform: translateX(100vw); }
+        }
+
+        .banner-text {
+            color: var(--primary-color);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 0 2rem;
+        }
     </style>
 </head>
 <body>
@@ -137,6 +167,11 @@
 
             <div class="hero-photo">
                 <img src="images/hero-photo.jpg" alt="Josh and Erin kissing in front of subway train">
+            </div>
+            <div class="high-score-banner" id="highScoreBanner" style="display:none;">
+                <div class="banner-track">
+                    <span class="banner-text" id="highScoreText"></span>
+                </div>
             </div>
 
             <div class="hero-details">
@@ -190,5 +225,33 @@
     <script src="js/main.js"></script>
     <script src="js/persistent-audio.js"></script>
     <script src="js/meatball-cursor.js"></script>
+
+    <!-- Firebase for high score banner -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAUPcuH1-6Txd4RjtZr3OghWQjTnxMLT98",
+            authDomain: "meatsnake-879b5.firebaseapp.com",
+            projectId: "meatsnake-879b5",
+            storageBucket: "meatsnake-879b5.firebasestorage.app",
+            messagingSenderId: "941195034022",
+            appId: "1:941195034022:web:fbcd2d3ae9abc9a9d7e367"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        db.collection('leaderboard')
+            .orderBy('score', 'desc')
+            .limit(1)
+            .onSnapshot(function(snapshot) {
+                if (!snapshot.empty) {
+                    const top = snapshot.docs[0].data();
+                    document.getElementById('highScoreText').textContent =
+                        '🏆  Meatsnake High Score: ' + top.name + ' — ' + top.score + ' points  🐍';
+                    document.getElementById('highScoreBanner').style.display = 'block';
+                }
+            });
+    </script>
 </body>
 </html>
