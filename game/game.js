@@ -105,7 +105,7 @@ function drawStartScreen() {
 
     ctx.font = 'italic 16px Georgia';
     ctx.fillStyle = '#888';
-    ctx.fillText('Use arrow keys or WASD', canvas.width / 2, canvas.height / 2 + 35);
+    ctx.fillText('Use WASD or arrow keys to eat socks!', canvas.width / 2, canvas.height / 2 + 35);
 }
 
 // Start the game
