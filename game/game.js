@@ -105,7 +105,9 @@ function drawStartScreen() {
 
     ctx.font = 'italic 16px Georgia';
     ctx.fillStyle = '#888';
-    ctx.fillText('Use WASD or arrow keys to eat socks!', canvas.width / 2, canvas.height / 2 + 35);
+    ctx.fillText('How to play: use WASD or arrow keys to control Meatball', canvas.width / 2, canvas.height / 2 + 35);
+    ctx.fillText('and eat as many socks as possible without running into', canvas.width / 2, canvas.height / 2 + 55);
+    ctx.fillText('a wall or yourself. Only works on desktop!', canvas.width / 2, canvas.height / 2 + 75);
 }
 
 // Start the game
